@@ -1,14 +1,16 @@
 import React from 'react'
-import Header from '../@briodev/gatsby-theme-blog/components/header'
+import Layout from '../@briodev/gatsby-theme-blog/components/pagelayout'
 
 
 
 export default function about() {
     return (
-        <div>
-            <Header />
-            <h1>About</h1>
-        </div>
+        
+        <Layout>
+            <div>
+                <h1>About</h1>
+            </div>
+        </Layout>
     )
 }
 
