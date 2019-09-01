@@ -19,7 +19,6 @@ const Header = ({ siteTitle }) => {
   `)
 
   const basePath = data.sitePlugin.pluginOptions.basePath
-  const tagsPath = data.sitePlugin.pluginOptions.tagsPath
   const homePath = data.sitePlugin.pluginOptions.homePath
   const aboutPath = data.sitePlugin.pluginOptions.aboutPath
   const contactPath = data.sitePlugin.pluginOptions.contactPath
@@ -27,15 +26,15 @@ const Header = ({ siteTitle }) => {
 
   return (
     <SiteHeader>
-      <SiteTitle>Mustard Seed Design Co.</SiteTitle>
+      <SiteTitle to={homePath}>
+        <Heading>Mustard Seed Design Co.</Heading>
+      </SiteTitle>
       <Content>
         <ul>
-          <NavLink to={homePath}>{siteTitle}</NavLink>
           <NavLink to={projectsPath}>Projects</NavLink>
           <NavLink to={aboutPath}>About</NavLink>
           <NavLink to={basePath}>Blog</NavLink>
           <NavLink to={contactPath}>Contact Us</NavLink>
-          <NavLink to={tagsPath}>Tags</NavLink>
         </ul>
       </Content>
     </SiteHeader>
@@ -97,8 +96,10 @@ const Content = styled.div`
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
   display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 55rem;
 `
 
 const NavLink = styled(Link)`
@@ -119,18 +120,23 @@ const NavLink = styled(Link)`
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
-  :hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  // :hover::after {
+  //   transform: scaleX(1);
+  //   transform-origin: bottom left;
+  // }
 `
 const SiteHeader = styled.header`
   width: 100vw;
   background: transparent;
   display: flex;
 `
-const SiteTitle = styled.div`
-  padding: 1rem 1.0875rem;
-  font-size: 1.2rem;
+const SiteTitle = styled(Link)`
+  color: black;
+  text-decoration: none;
   background: transparent;
+  position: fixed;
+`
+const Heading = styled.h1`
+  margin-top: 0.2rem;
+  padding-left: 2rem;
 `
