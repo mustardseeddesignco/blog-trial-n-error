@@ -1,13 +1,11 @@
 import React from "react"
-import Header from "../@briodev/gatsby-theme-blog/components/header"
+import Layout from "../@briodev/gatsby-theme-blog/components/pagelayout"
 import { Container } from "theme-ui"
 import styled from "@emotion/styled"
 
 export default function index() {
   return (
-    <div>
-      <Header />
-
+    <Layout>
       <HeroBox>
         <HeroText>We Design Inspiration</HeroText>
       </HeroBox>
@@ -15,7 +13,7 @@ export default function index() {
       <Container>
         <h3>We Love To Design On Edge</h3>
       </Container>
-    </div>
+    </Layout>
   )
 }
 
