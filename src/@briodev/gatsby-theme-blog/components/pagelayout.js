@@ -1,17 +1,11 @@
-import React from 'react'
-import Header from './header'
+import React from "react"
+import Header from "./header"
 
-
-
-export default function pagelayout({children}) {
-    
-    return (
-        <div>
-            <Header />
-            {children}
-        </div>
-    )
+export default function pagelayout({ children }) {
+  return (
+    <div>
+      <Header />
+      {children}
+    </div>
+  )
 }
-
-
-    

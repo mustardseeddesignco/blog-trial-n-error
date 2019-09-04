@@ -106,25 +106,10 @@ const NavLink = styled(Link)`
   color: black;
   margin-left: 1em;
   text-decoration: none;
-
-  ::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    transform-origin: bottom right;
-    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  font-family: font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   }
-
-  // :hover::after {
-  //   transform: scaleX(1);
-  //   transform-origin: bottom left;
-  // }
 `
+
 const SiteHeader = styled.header`
   width: 100vw;
   background: transparent;
@@ -135,6 +120,7 @@ const SiteTitle = styled(Link)`
   text-decoration: none;
   background: transparent;
   position: fixed;
+  font-family: font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 `
 const Heading = styled.h1`
   margin-top: 0.2rem;
