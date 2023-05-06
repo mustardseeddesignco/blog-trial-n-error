@@ -16,7 +16,7 @@
     "@briodev/gatsby-theme-blog": "^1.1.0",
     "@mdx-js/mdx": "^1.4.0",
     "@mdx-js/react": "^1.4.0",
-    "gatsby": "^2.13.73",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-mdx": "^1.0.33",
     "gatsby-source-filesystem": "^2.1.19",
     "react": "^16.9.0",
